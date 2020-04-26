@@ -1,0 +1,120 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body {
+    background-color: #d2d2d2;
+    font-family: 'Roboto', sans-serif;
+    color: #5a5a5a;
+}
+
+.content {
+    background-color: #fafafa;
+    position: relative;
+    max-width: 700px;
+    border-radius: 20px;
+    margin: 0 auto;
+    margin-top: 15px;
+    text-align: center;
+}
+
+.content__head {
+    padding: 50px 0 30px 0;
+    color: #000;
+    position: relative;
+}
+
+    .content__head--name {
+        font-size: 1.5rem;
+        letter-spacing: 0.4em;
+        padding-bottom: 26px;
+        text-transform: uppercase;
+    }
+    .content__head--line {
+        background-color: #000;
+        width: 18vw;
+        height: 5px;
+        margin: auto;
+      
+    }
+
+    .pattern-gray {
+        background-color: #edecec;
+        height: 400px;
+        width: 100%;
+        position: absolute;
+        transform: skewY(-5deg);
+        top: 100px;
+    }
+
+.content__button {
+    display: flex;
+}
+    .content__button--button {
+        width: 60%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+section {
+    font-family: 'Amiri', serif;
+    display: flex;
+    flex-direction: column;
+    padding: 30px 0;
+    text-align: start;
+    letter-spacing: 0.1em;
+}
+
+.text__toggle {
+        display: flex;
+        flex-direction: column;
+        font-family: 'Amiri', serif;
+        width: 40%;
+        margin: 30px 0;
+        text-align: start;
+        letter-spacing: 0.1em;
+        z-index: 1;
+    }
+
+        .text__toggle--p {
+            padding: 35px 0;
+        }
+
+footer {
+    font-family: 'Amiri', serif;
+    margin-top: 40px;
+    padding-bottom: 30px;
+    letter-spacing: 0.2em;
+}
+
+    .footer__made-by {
+        padding-top: 20px;
+        font-size: 0.9rem;
+    }
+        .footer__detail--link {
+            text-decoration: none;
+            color: #2973CB;
+        }
+
+
+@media only screen and (max-width: 768px) {
+    .content {
+        max-width: 600px;
+    }
+}
+
+@media only screen and (max-width: 425px) {
+    .content__button--button {
+        width: 55%;
+    }
+    .text__toggle {
+        width: 45%;
+    }
+    .content {
+        border-radius: 0;
+        margin: 0;
+    }
+}

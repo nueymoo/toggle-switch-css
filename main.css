@@ -1,0 +1,223 @@
+
+/* =========================
+
+    On / Off
+
+========================= */
+
+.toggle-1 {
+    display: inline-block;
+    vertical-align: top;
+    margin: 0 15px 0 0;
+}
+
+    .toggle-1__input {
+        display: none;
+    }
+
+    .toggle-1__button {
+        position: relative;
+        cursor: pointer;
+        display: inline-block;
+
+        font-family: 'Roboto', sans-serif;
+        text-transform: uppercase;
+        font-size: 1rem;
+        line-height: 20px;
+
+        width: 120px;
+        height: 40px;
+        color: white;
+        background-color: #f2395a;
+        border: solid 1px #f2395a;
+        box-shadow: 0 0 12px rgba(255, 61, 94, 0.5);
+
+        transition: all 0.3 ease;
+    }
+
+    .toggle-1__button::before {
+        position: absolute;
+        display: flex;
+        align-items: center;
+
+        top: 4px;
+        left: 60px;
+        height: 30px;
+        padding: 0 10px;
+
+        content: "off";
+        background: white;
+        color: #f2395a;
+        transition: all 0.3s ease;
+        
+    }
+
+    .toggle-1__input:checked + .toggle-1__button {
+        background: #8ECF45;
+        border: solid 1px #8ECF45;
+        box-shadow: 0 2px 20px rgba(142, 207, 69, 0.5);
+
+    }
+
+    .toggle-1__input:checked + .toggle-1__button::before {
+        content: 'on';
+        left: 5px;
+        color:#8ECF45;
+    }
+
+
+    
+/* =========================
+
+    Dark / light mode 
+
+========================= */
+
+
+.toggle-2 {
+    display: inline-block;
+    vertical-align: top;
+    margin: 0 15px 0 0;
+}
+    
+        .toggle-2__input {
+            display: none;
+        }
+    
+        .toggle-2__button {
+            position: relative;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            font-size: 1rem;
+            line-height: 20px;
+            text-transform: uppercase;
+            color: white;
+            background-color: #d2d2d2;
+            border: solid 1px #d2d2d2;
+            border-radius: 20px;
+            
+            width: 85px;
+            height: 40px;
+            cursor: pointer;
+            transition: all 0.3 ease;
+        }
+
+            .toggle-2__button--icon {
+                height: 16px;
+                width: auto;
+                padding: 0 12px;
+            }
+
+        .toggle-2__button::before {
+            position: absolute;
+            top: -1px;
+            left: -5px;
+            content: '';
+
+            display: inline-block;
+            height: 40px;
+            width: 40px;
+
+            background: #5a5a5a;
+            border-radius: 100%;
+            
+            transition: all 0.3s ease;
+        }
+
+        .toggle-2__input:checked + .toggle-2__button {
+            background: #FFF;
+            border: solid 1px #FFF;
+
+        }
+        .toggle-2__input:checked + .toggle-2__button::before {
+            content: '';
+            left: 45px;
+            background-color:#FFc700;
+        }
+
+
+/* =========================
+
+    Activate button 
+
+========================= */
+
+.toggle-3 {
+    font-size: 0.8rem;
+    display: inline-block;
+    vertical-align: top;
+    margin: 0 15px 0 0;
+}
+
+    .toggle-3__input {
+        display: none;
+    }
+
+    .toggle-3__button {
+        position: relative;
+        display: inline-block;
+        font-family: 'Roboto', sans-serif;
+        text-transform: uppercase;
+
+        width: 150px;
+        height: 40px;
+        background: #d2d2d2;
+        color: #FFF;
+        border: solid 1px #d2d2d2;
+        border-radius: 7px;
+
+        padding: 5px 10px 5px 30px;
+        transition: all 0.3s ease;
+        cursor: pointer;
+    }
+
+    .toggle-3__button::before {
+        position: absolute;
+        content: '';
+        top: 10px;
+        left: 10px;
+
+        display: inline-block;
+        width: 20px;
+        height: 20px;
+
+        background: #FFF;
+        border-radius: 100%;
+
+        transition: all 0.3s ease;
+    }
+
+    .toggle-3__button::after {
+        content: "ACTIVATE";
+        position: absolute;
+        top: 10px;
+        left: 40px;
+        font-size: 1rem;
+    }
+
+    .toggle-3__button--correct {
+        position: absolute;
+        width: 12px;
+        top: 16px;
+        left: 14px;
+        visibility: hidden;
+    }
+
+
+    .toggle-3__input:checked + .toggle-3__button {
+        background: #2973CB;
+        border: #2973CB;
+        color: white;
+    }
+
+        .toggle-3__input:checked + .toggle-3__button > .toggle-3__button--correct {
+        visibility: visible;
+        }  
+
+            .toggle-3__input:checked + .toggle-3__button::after {
+            content: "ACTIVATED";
+            }
+
+
